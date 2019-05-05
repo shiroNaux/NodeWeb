@@ -2,12 +2,24 @@ var db = require("../common/database")
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
+db.getConnect();
 var userSchema = new Schema({
     name: String,
     pass: String
 });
-// mongoose.connect('mongodb+srv://' + config.get("mongo.username")+":" +config.get("mongo.pass") +'@nodejsapp-t2ee4.mongodb.net/test?retryWrites=true',{ useNewUrlParser: true });
-// console.log('mongodb+srv://' + config.get("mongo.username")+":" +config.get("mongo.pass") +'@nodejsapp-t2ee4.mongodb.net/test?retryWrites=true');
+function addus(user){
+    adduser = users({
+        "name": user.name,
+        "pass": user.pass
+    });
 
+    adduser.save(function(err){
+        if(err) throw err;
+   
+        console.log("insert");    
+    });
+}
 var users = mongoose.model("user", userSchema);
-module.exports = users;
+module.exports = {
+    addus : addus
+}
