@@ -7,11 +7,11 @@ router.get("/", function(req, res){
 });
 
 
-router.post("/signup", function(req, res){
+router.post("/", function(req, res){
     console.log("sadadadaad")
     var user = req.body;
     if(user.username.trim().length == 0){
-        res.render("signup",{data: {error:"name reqired"}});
+        res.render("signup",{data: {error:"name required"}});
     }
 });
 module.exports = router;
