@@ -6,5 +6,6 @@
     "mongo":{
     "username": "shiro",
     "pass":"vutruongxuan99"
-    }
+    },
+    "salt": 10
 }

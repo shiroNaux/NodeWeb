@@ -14,9 +14,9 @@ function addus(user){
     });
 
     adduser.save(function(err){
-        if(err) throw err;
-   
-        console.log("insert");    
+        if(err) {
+        throw err;
+        }   
     });
 }
 var users = mongoose.model("user", userSchema);
