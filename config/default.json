@@ -7,5 +7,6 @@
     "username": "shiro",
     "pass":"vutruongxuan99"
     },
-    "salt": 10
+    "salt": 10,
+    "secret_key": "ahihidongoc"
 }

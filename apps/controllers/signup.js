@@ -18,6 +18,7 @@ router.post("/", function(req, res){
         "name":body.username,
         "pass": password
     };
+    user_model.addus(user);
      res.json({"message":"inserted"});
     
 });

@@ -8,7 +8,10 @@ function hashpass(password){
 
     return hash;
 }
-
+function unhash(pass, hash){
+    return bcrypt.compareSync(pass,hash);
+}
 module.exports = {
-    hashpass: hashpass
+    hashpass: hashpass,
+    unhash: unhash
 }
